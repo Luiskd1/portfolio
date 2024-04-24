@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Fira_Code } from "next/font/google";
 import "./globals.css";
+import { Divider, NextUIProvider } from "@nextui-org/react";
+import HeaderPage from "@/components/Header/header";
+import FooterPage from "@/components/Footer/FooterPage";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Fira_Code({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +19,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+
+      <body className={inter.className}>
+        <NextUIProvider className="w-full h-screen bg-[#010c15] relative p-16 text-[#607B96]">
+          <div className="w-full h-full bg-[#011627] rounded border border-[#1E2D3D] grid grid-rows-[auto,1fr,auto]">
+            <div className="row-span-1">
+              <HeaderPage />
+            </div>
+            <div className="row-span-2">
+              <Divider />
+              <div className="h-full overflow-auto">
+                {children}
+              </div>
+            </div>
+            <div className="row-span-3">
+              <FooterPage />
+            </div>
+          </div>
+        </NextUIProvider>
+      </body>
     </html>
   );
 }
