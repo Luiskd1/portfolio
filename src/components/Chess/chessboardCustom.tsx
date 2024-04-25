@@ -1,139 +1,117 @@
 'use client'
-import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
+import { useState } from "react";
+import { Chessboard } from "react-chessboard";
+import { Chess } from 'chess.js'
 
-const GameContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
+function ChessboardCustom() {
+  const [game, setGame] = useState(new Chess());
+  const [isGameOver, setIsGameOver] = useState(false);
+  const [isGameDraw, setIsGameDraw] = useState(false);
+  const [startGame, setStartGame] = useState(false);
 
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(20, 5%);
-  border: 1px solid #ccc; /* Añade un borde alrededor del tablero */
-  min-width: 80%; /* Ajusta el ancho del tablero */
-  min-height: 50vh; /* Ajusta la altura del tablero */
-`;
+  function safeGameMutate(modify) {
+    setGame((g) => {
+      const update = { ...g };
+      modify(update);
+      return update;
+    });
+  }
+  //Movement of computer
+  function makeRandomMove() {
+    const possibleMove = game.moves();
 
-const Cell = styled.div`
-  width: 100%;
-  height: 100%;
-  background-color: ${(props) => (props.isSnake ? 'green' : props.isFood ? 'transparent' : 'rgba(1, 22, 39, 0.84)')};
-  background-image: ${(props) => (props.isFood ? 'url(greenaple.png)' : 'none')}; /* Reemplaza "path/to/your/image" con la ruta de tu imagen */
-  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir toda la celda */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  border-radius: ${(props) => (props.isSnake ? '50%' : '0')};
-`;
+    if (game.isGameOver() || possibleMove.length === 0) {
+      setIsGameOver(true);
+      return;
+    }
 
-const Game = () => {
-    const [snake, setSnake] = useState([{ x: 10, y: 10 }]);
-    const [food, setFood] = useState({ x: 5, y: 5 });
-    const [direction, setDirection] = useState('RIGHT');
-    const [gameOver, setGameOver] = useState(false);
+    if (
+      game.isDraw() ||
+      game.isStalemate() ||
+      game.isThreefoldRepetition() ||
+      game.isInsufficientMaterial()
+    ) {
+      setIsGameDraw(true);
+      return;
+    }
 
-    useEffect(() => {
-        const handleKeyPress = (e) => {
-            switch (e.key) {
-                case 'ArrowUp':
-                    setDirection('UP');
-                    break;
-                case 'ArrowDown':
-                    setDirection('DOWN');
-                    break;
-                case 'ArrowLeft':
-                    setDirection('LEFT');
-                    break;
-                case 'ArrowRight':
-                    setDirection('RIGHT');
-                    break;
-                default:
-                    break;
-            }
-        };
+    const randomIndex = Math.floor(Math.random() * possibleMove.length);
+    safeGameMutate((game) => {
+      game.move(possibleMove[randomIndex]);
+    });
+  }
 
-        document.addEventListener('keydown', handleKeyPress);
+  function onDrop(source, target) {
+    let move = null;
+    safeGameMutate((game) => {
+      move = game.move({
+        from: source,
+        to: target,
+        promotion: "q",
+      });
+    });
+    if (move == null) return false;
+    setTimeout(makeRandomMove, 200);
+    return true;
+  }
 
-        return () => {
-            document.removeEventListener('keydown', handleKeyPress);
-        };
-    }, []);
+  function resetGame() {
+    setGame(new Chess());
+    setIsGameOver(false);
+  }
 
-    useEffect(() => {
-        const moveSnake = () => {
-            const newSnake = [...snake];
-            let newHead = { ...snake[0] };
-
-            switch (direction) {
-                case 'UP':
-                    newHead.y -= 1;
-                    break;
-                case 'DOWN':
-                    newHead.y += 1;
-                    break;
-                case 'LEFT':
-                    newHead.x -= 1;
-                    break;
-                case 'RIGHT':
-                    newHead.x += 1;
-                    break;
-                default:
-                    break;
-            }
-
-            if (
-                newHead.x < 0 ||
-                newHead.x >= 20 ||
-                newHead.y < 0 ||
-                newHead.y >= 20 ||
-                newSnake.some((segment) => segment.x === newHead.x && segment.y === newHead.y)
-            ) {
-                setGameOver(true);
-                return;
-            }
-
-            newSnake.unshift(newHead);
-            if (newHead.x === food.x && newHead.y === food.y) {
-                setFood({ x: Math.floor(Math.random() * 20), y: Math.floor(Math.random() * 20) });
-            } else {
-                newSnake.pop();
-            }
-
-            setSnake(newSnake);
-        };
-
-        const interval = setInterval(moveSnake, 200);
-
-        return () => clearInterval(interval);
-    }, [snake, direction, food]);
-
-    const renderGrid = () => {
-        const grid = [];
+  return (
+    <div style={{ width: "100%", position: "relative" }}>
+      <Chessboard
+        position={startGame ? game.fen() : game.board}
+        onPieceDrop={onDrop}
+        customBoardStyle={{
+          borderRadius: "5px",
+          boxShadow: "inset 0 0 10px rgba(0, 0, 0, 0.3)",
+        }}
+        customDarkSquareStyle={{ backgroundColor: "#011627d6" }}
+        customLightSquareStyle={{ backgroundColor: "#175553" }}
+        customArrowColor="#43D9AD"
+      />
       
-        for (let y = 0; y < 20; y++) {
-          for (let x = 0; x < 20; x++) {
-            const isSnake = snake.some((segment) => segment.x === x && segment.y === y);
-            const isFood = food.x === x && food.y === y;
-            const isWall = x === 0 || x === 19 || y === 0 || y === 19;
-      
-            grid.push(<Cell key={`${x}-${y}`} isSnake={isSnake} isFood={isFood} isWall={isWall} />);
-          }
-        }
-      
-        return grid;
-      };
+      {isGameDraw ||
+        (isGameOver && (
+          <div className="game-over">
+            <button
+              onClick={() => setIsGameOver(false)}
+              className="close-button"
+            >
+              ✖
+            </button>
 
-    return (
-        <div className='w-full h-full  '>
-            <GameContainer>
-                {gameOver ? (
-                    <h2>Game Over!</h2>
-                ) : (
-                    <Grid>{renderGrid()}</Grid>
-                )}
-            </GameContainer>
+            {isGameDraw && (
+              <>
+                <p>Draw</p>
+              </>
+            )}
+            {isGameOver && (
+              <>
+                <p style={{ fontWeight: "bold" }}>Game Over</p>{" "}
+                <p>{game.turn() === "w" ? "Black" : "White"} won</p>
+              </>
+            )}
+            <button onClick={resetGame} className="button-play">
+              Play Again
+            </button>
+          </div>
+        ))}
+      {!startGame && (
+        <div className="game-over">
+          <p style={{ fontWeight: "bold", paddingBottom: "10px" }}>
+            Start Game
+          </p>
+          <button onClick={() => setStartGame(true)} className="button-play">
+            Play
+          </button>
         </div>
-    );
-};
+      )}
+    </div>
+  );
+}
 
-export default Game;
+export default ChessboardCustom;
