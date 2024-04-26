@@ -11,8 +11,11 @@
   "dependencies": {
     "@nextui-org/divider": "^2.0.27",
     "@nextui-org/react": "^2.3.5",
+    "@nextui-org/tabs": "^2.0.29",
+    "@radix-ui/react-tabs": "^1.0.4",
     "chess.js": "^1.0.0-beta.8",
     "framer-motion": "^11.1.7",
+    "lib-utils-ts": "^0.0.0-test",
     "next": "14.2.2",
     "react": "^18",
     "react-chessboard": "^4.5.0",
