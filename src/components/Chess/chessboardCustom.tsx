@@ -63,7 +63,7 @@ function ChessboardCustom() {
   return (
     <div style={{ width: "100%", position: "relative" }}>
       <Chessboard
-        position={startGame ? game.fen() : game.board}
+        position={startGame && game ? game.fen() : 'start'}
         onPieceDrop={onDrop}
         customBoardStyle={{
           borderRadius: "5px",

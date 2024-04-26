@@ -9,7 +9,7 @@ export default function Home() {
   
   return (
     <main className="flex text-lg mx-32 h-full items-center " >
-      <div className="bg-red-200 flex w-1/2 h-full  text-white  justify-center items-center">
+      <div className=" flex w-1/2 h-full  text-white  justify-center items-center">
         <div>
           <h2 >Hi All. I am </h2>
           <h1 className="text-6xl text-white">Luis Santana</h1>
