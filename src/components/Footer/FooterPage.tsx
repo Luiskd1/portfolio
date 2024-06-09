@@ -9,7 +9,7 @@ const FooterPage = () => {
     return (
         <footer className="flex w-full border border-[#1E2D3D] h-12 space justify-between mt-auto ">
             <div className="flex">
-                <h1 className="size-5 w-full h-full font-medium border border-[#1E2D3D]  flex justify-start pl-2 items-center mr">find me in:</h1>
+                <h1 className="size-5 w-96 h-full font-medium border border-[#1E2D3D]  flex justify-start pl-2 items-center mr">find me in:</h1>
                 <div className="flex">
                     <Link className="flex border border-[#1E2D3D] w-16 justify-center items-center hover:border-b-2 hover:border-b-[#FEA55F] " href='/' >
                         <Image src='twitter.svg' alt="imagen twitter" width={30} height={30} />

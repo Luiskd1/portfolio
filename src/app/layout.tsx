@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fira_Code } from "next/font/google";
+import { Fira_Code} from "next/font/google";
 import "./globals.css";
 import { Divider, NextUIProvider } from "@nextui-org/react";
 import HeaderPage from "@/components/Header/header";
@@ -21,14 +21,14 @@ export default function RootLayout({
     <html lang="en">
 
       <body className={inter.className}>
-        <NextUIProvider className="w-full h-screen bg-[#010c15] relative p-16 text-[#607B96]">
-          <div className="w-full h-full bg-[#011627] rounded border border-[#1E2D3D] grid grid-rows-[auto,1fr,auto]">
+      <NextUIProvider className="w-full h-screen relative p-16 text-[#8095AB]" style={{ background: 'linear-gradient(135deg, #04060A, #151E27)' }}>
+      <div className="w-full h-full rounded border border-[#1E2D3D] grid grid-rows-[auto,1fr,auto] ">
             <div className="row-span-1">
               <HeaderPage />
             </div>
             <div className="row-span-2">
               <Divider />
-              <div className="h-full overflow-auto">
+              <div className="h-full overflow-auto ">
                 {children}
               </div>
             </div>

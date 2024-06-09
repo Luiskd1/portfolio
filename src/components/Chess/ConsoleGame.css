@@ -1,0 +1,49 @@
+body {
+	background-color: rgb(40,40,40);
+	color: #f5f5f5;
+}
+
+::selection {
+	color: #f5f5f5;
+	background-color: red;
+}
+
+.wrapper {
+	margin: auto;
+	width: 570px;
+	text-align: center;
+	font-family: Calibri, monospace;
+	font-size: 1.1em;
+}
+
+#snakeGame {
+	border: 5px solid #ccc;
+}
+
+#snakeGameScore {
+	display: inline-block;
+	float: left;
+}
+#snakeGameHighestScore {
+	display: inline-block;
+	float: right;
+}
+
+footer {
+	font-family: monospace;
+	position: fixed;
+	left: 50px;
+	bottom: 10px;
+	font-size: 1.25em;
+}
+
+a {
+	padding: 0 3px;
+	text-decoration: none;
+	color: rgb(240,40,0);
+}
+
+a:hover {
+	background-color: rgb(240,40,0);
+	color: #f5f5f5;
+}

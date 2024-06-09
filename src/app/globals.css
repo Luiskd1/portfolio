@@ -31,3 +31,110 @@ body {
     text-wrap: balance;
   }
 }
+
+
+.leftbar-text {
+  font-family: "Fira Code";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #607b96;
+}
+
+.color-submenu-hover:hover{
+  background-color: #f56565 !important; /* Cambia el color de fondo al hacer hover */
+  color: #fff !important; /* Cambia el color del texto al hacer hover */
+}
+
+.game-over {
+  position: relative;
+}
+
+.game-over-message {
+  position: absolute;
+  top: -250px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #011627, #00223E);
+  color: #FFFFFF; /* Texto blanco */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.game-over-message button {
+  background-color: #002147; /* Azul oscuro */
+  color: #FFFFFF; /* Texto blanco */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.game-over-message h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+
+.game-over-message button:hover {
+  background-color: #002147; /* Azul más oscuro al pasar el mouse */
+}
+
+.start-game-button {
+  position: absolute;
+  top: 43.5%;
+  left: 60.5%;
+  transform: translate(-50%, -50%);
+  background-color: #39FF14; /* Color verde lima */
+  color: #011627; /* Texto oscuro para contrastar */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.start-game-button:hover {
+  background-color: #33cc33; /* Cambio de color al pasar el mouse */
+}
+
+
+
+.gradient-box {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  z-index: 1; 
+}
+
+.green-purple {
+  background: linear-gradient(45deg, rgba(0, 255, 0, 0.05), rgba(128, 0, 128, 0.05));
+  top: 35%;
+  right:15%;
+}
+
+.blue-purple {
+  background: linear-gradient(45deg, rgba(0, 0, 255, 0.05), rgba(128, 0, 128, 0.05));
+  bottom: 40%;
+  right: 22%;
+}
+
+@keyframes twinkling {
+  0% {background-position: 0 0;}
+  100% {background-position: 10000px 5000px;}
+}
+
+.starry-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url('/estrella.svg'); /* Reemplaza '/ruta/al/archivo/estrella.svg' con la ruta correcta de tu archivo SVG */
+}

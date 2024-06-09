@@ -1,38 +1,36 @@
 'use client'
-import React from "react";
-import { Accordion, AccordionItem } from "@nextui-org/react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/tabs/tabs";
+import { Menu, MenuItem, Sidebar, SubMenu } from "react-pro-sidebar";
+import { RiArrowDropDownFill } from "react-icons/ri";
+import { GoFileDirectoryFill } from "react-icons/go";
+import About from "./about";
 
 const page = () => {
 
+  const [collapsible, setCollapsible] = useState(false)
+
+  const onchangecollapsible = () => {
+    setCollapsible(!collapsible)
+  }
+
+  console.log(collapsible)
 
 
   return (
+
+
+
+
     <div className="  flex  h-full"  >
-      <div className="flex-col p-8 gap-6 h-full border border-[#1E2D3D]  ">
-        <Image src='devcode.svg' alt="imagen devcode" width={40} height={40} className="mb-10" />
-        <Image src='personalinfo.svg' alt="imagen personalinfo" width={40} height={40} className="mb-10" />
+      <div className="flex flex-col gap-6 h-full border border-[#1E2D3D] w-[6rem]   items-center">
+        <Image src='devcode.svg' alt="imagen devcode" width={40} height={40} className="mb-5 mt-4" />
+        <Image src='personalinfo.svg' alt="imagen personalinfo" width={40} height={40} className="mb-5" />
         <Image src='hobbiesicon.svg' alt="imagen hobbiesicon" width={40} height={40} />
       </div>
+    <About/>
 
-
-      <Tabs defaultValue="account" className="w-full flex ">
-
-        <div>
-          <Accordion>
-            <AccordionItem key="1" aria-label="Personal-Info" title="Personal-Info">
-              <TabsList>
-                <TabsTrigger value="account">Account</TabsTrigger>
-                <TabsTrigger value="password">Password</TabsTrigger>
-              </TabsList>
-            </AccordionItem>
-          </Accordion>
-        </div>
-
-        <TabsContent value="account">Make changes to your account here.</TabsContent>
-        <TabsContent value="password">Change your password here.</TabsContent>
-      </Tabs>
 
     </div >
 
