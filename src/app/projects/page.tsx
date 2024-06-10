@@ -4,6 +4,7 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import { IoArrowForwardSharp } from "react-icons/io5";
 import BankApp from './bankApp';
+import CrudApp from './crudapp/crudApp';
 
 
 const Page = () => {
@@ -34,8 +35,8 @@ const Page = () => {
             size={25}
             className={`${activeTab === 0 ? 'text-red-500' : 'text-[#8095AB]'} group-hover:text-red-500`}
           />
-          BankApp 
-        </button> 
+          BankApp
+        </button>
         <button
           className={`group flex items-center gap-2 hover:text-white ${activeTab === 1 ? 'text-white' : ''}`}
           onClick={() => handleTabClick(1)}
@@ -44,8 +45,8 @@ const Page = () => {
             size={25}
             className={`${activeTab === 1 ? 'text-blue-500' : 'text-[#8095AB]'} group-hover:text-blue-500`}
           />
-          CrudApp 
-        </button> 
+          CrudApp
+        </button>
         <button
           className={`group flex items-center gap-2 hover:text-white ${activeTab === 2 ? 'text-white' : ''}`}
           onClick={() => handleTabClick(2)}
@@ -54,19 +55,22 @@ const Page = () => {
             size={25}
             className={`${activeTab === 2 ? 'text-green-500' : 'text-[#8095AB]'} group-hover:text-green-500`}
           />
-          Portfolio 
-        </button> 
+          Portfolio
+        </button>
 
       </div>
 
       {/* Content based on activeTab */}
       <div className='w-full  h-full pt-6'>
-        {activeTab === 0 && 
-        <div>
-          <BankApp/>
-        </div>
-          }
-        {activeTab === 1 && <div>Content for Tab 2</div>}
+        {activeTab === 0 &&
+          <div>
+            <BankApp />
+          </div>
+        }
+        {activeTab === 1 &&
+          <div>
+            <CrudApp/>
+          </div>}
         {activeTab === 2 && <div>Content for Tab 3</div>}
       </div>
     </div>

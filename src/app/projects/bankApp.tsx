@@ -1,4 +1,5 @@
 import React from 'react'
+import BankPhotos from './bankphotos'
 
 const BankApp = () => {
   return (
@@ -26,7 +27,7 @@ const BankApp = () => {
         </div>
       </div>
 
-
+    <BankPhotos/>
     </div>
   )
 }

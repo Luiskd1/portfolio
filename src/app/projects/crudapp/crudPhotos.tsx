@@ -9,17 +9,14 @@ import {
     DialogTrigger,
 } from "@/components/ui/dialog";
 
-const BankPhotos = () => {
+
+const CrudPhotos = () => {
     const images = [
-        "/bank1.png",
-        "/bank2.png",
-        "/bank3.png",
-        "/bank4.png",
-        "/bank5.png",
-        "/bank6.png",
-        "/bank7.png",
-        "/bank8.png",
-        "/bank9.png",
+        "/crud1.png",
+        "/crud2.png",
+        "/crud3.png",
+        "/crud4.png",
+        "/crud5.png",
     ];
 
     const plugin = useRef(
@@ -42,8 +39,8 @@ const BankPhotos = () => {
                                 <CardContent className="flex items-center justify-center p-6">
                                     <Dialog>
                                         <DialogTrigger asChild>
-                                            <div className="w-full h-[400px] flex justify-center items-center overflow-hidden">
-                                                <img src={image} alt={`Bank ${index + 1}`} className="w-full h-full object-cover hover:cursor-pointer"/>
+                                            <div className=" h-[400px] flex justify-center items-center overflow-hidden">
+                                                <img src={image} alt={`Bank ${index + 1}`} className="w-full h-full  hover:cursor-pointer"/>
                                             </div>
                                         </DialogTrigger>
                                         <DialogContent className="min-w-[90%] h-[90%] flex items-center justify-center bg-gradient-to-r from-[#04060A] border-[#131B23] to-[#151E27]">
@@ -60,6 +57,6 @@ const BankPhotos = () => {
             <CarouselNext />
         </Carousel>
     );
-};
+}
 
-export default BankPhotos;
+export default CrudPhotos
