@@ -16,7 +16,7 @@ const FooterPage = () => {
                         <SiGithub  size={30}/>
                     </Link>
                     <Link className="flex border border-[#1E2D3D] w-16 justify-center items-center hover:border-b-2 hover:border-b-[#FEA55F]" href='/' >
-                        <SiLinkedin  size={30}   />
+                        <SiLinkedin  size={30} className="icon-border"  />
                     </Link>
                 </div>
             </div>

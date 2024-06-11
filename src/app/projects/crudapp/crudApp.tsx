@@ -38,7 +38,7 @@ const CrudApp = () => {
         <CrudPhotos />
       </div>
 
-      <div className=' sm:flex w-full'>
+      <div className=' sm:flex w-full '>
         <div className=' sm:w-1/2 pt-8'>
           <Link href={"https://portfolio-nine-blond-63.vercel.app/"} target="_blank" ><Button variant="link"><SiVercel size={80} />  <h1 className='text-2xl pl-4'>Deploy in vercel</h1>
           </Button></Link>
