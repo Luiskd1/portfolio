@@ -22,8 +22,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { themes } = useTheme()
-  console.log(themes)
+
 
   return (
     <html lang="en">
