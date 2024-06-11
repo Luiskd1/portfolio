@@ -8,6 +8,7 @@ import {
     DialogContent,
     DialogTrigger,
 } from "@/components/ui/dialog";
+import Image from 'next/image';
 
 
 const CrudPhotos = () => {
@@ -40,11 +41,11 @@ const CrudPhotos = () => {
                                     <Dialog>
                                         <DialogTrigger asChild>
                                             <div className=" h-[400px] flex justify-center items-center overflow-hidden">
-                                                <img src={image} alt={`Bank ${index + 1}`} className="w-full h-full  hover:cursor-pointer"/>
+                                                <Image  src={image} alt={`Bank ${index + 1}`} width={1920} height={1080} className="w-full h-full  hover:cursor-pointer"/>
                                             </div>
                                         </DialogTrigger>
-                                        <DialogContent className="min-w-[90%] h-[90%] flex items-center justify-center bg-gradient-to-r from-[#04060A] border-[#131B23] to-[#151E27]">
-                                            <img src={image} alt={`Bank ${index + 1}`} className="max-w-full max-h-full object-contain"/>
+                                        <DialogContent className="min-w-[90%] h-[90%] flex items-center justify-center bg-gradient-to-r border bg-[#04060A] border-[#131B23] to-[#151E27]">
+                                            <Image src={image} alt={`Bank ${index + 1}`} width={1920} height={1080} className="max-w-full max-h-full "/>
                                         </DialogContent>
                                     </Dialog>
                                 </CardContent>

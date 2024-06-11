@@ -25,7 +25,7 @@ const CrudApp = () => {
                 <li>Tailwind CSS: Utilized for design and styling, enabling rapid and efficient development of a visually appealing interface.</li>
                 <li>Next.js: A React framework that provides server-side rendering and static site generation capabilities, enhancing performance and SEO.</li>
                 <li>Express: A Node.js framework for building the backend of the application, handling routes and server logic.</li>
-                <li>MongoDB: A NoSQL database used to store and manage the application's data</li>
+                <li>MongoDB: A NoSQL database used to store and manage the application&apos;s data</li>
               </ul>
     
             </div>

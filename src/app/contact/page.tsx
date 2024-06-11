@@ -1,19 +1,15 @@
-import GameCulebra from "@/components/Chess/consoleGame"
-import { motion } from "framer-motion";
-import BankPhotos from "../projects/bankphotos";
+import React from 'react';
+import ContactMe from './contactme';
+import ParticlesSearch from "@/components/particule/particules";
+import { Sheet, SheetClose, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 
-
-const page = () => {
-
-
-
-
-
+const Page = () => {
   return (
-    <div className="background">
-      <BankPhotos/>
+    <div className=" h-full">
+      <ContactMe />
+      
     </div>
   );
-}
+};
 
-export default page
+export default Page;

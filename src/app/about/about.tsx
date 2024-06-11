@@ -8,11 +8,11 @@ import Image from "next/image";
 
 const About = () => {
     return (
-        <div className="flex w-full">
-            <div className="flex w-10/12 h-full ml-10 pt-10">
-                <div>
+        <div className="sm:flex w-full px-2 ">
+            <div className="sm:flex sm:w-10/12 sm:h-full ml-10 pt-10">
+                <div className="">
                     <h1 className="text-white">About me</h1>
-                    <p>I'm an electronic engineer with a passion for frontend programming. I specialize in using React and Next.js, and I'm proficient in databases like MongoDB and Supabase.</p>
+                    <p>I&apos;m an electronic engineer with a passion for frontend programming. I specialize in using React and Next.js, and I&apos;m proficient in databases like MongoDB and Supabase.</p>
                     <div>
                         <div className="flex pt-10 ">
                             <div className="bg-[#12171F] flex items-center justify-center rounded-xl">
@@ -55,7 +55,7 @@ const About = () => {
                             </div>
                             <div className="ml-6">
                                 <h1 className="text-white">FinOps / Serverless / Cloud Native</h1>
-                                <p>I'm experienced in FinOps, serverless architecture, and cloud-native development, enabling businesses to optimize costs and scalability.</p>
+                                <p>I&apos;m experienced in FinOps, serverless architecture, and cloud-native development, enabling businesses to optimize costs and scalability.</p>
                             </div>
                         </div>
                         <div className="pt-10  ">
@@ -79,7 +79,9 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <div className=" w-2/12  border-l-2 border-[#1E2D3D]   pt-10 px-3   ">
+
+            
+            <div className="  sm:w-2/12  sm:border-l-2 border-[#1E2D3D] sm:h-full   pt-10 px-3   ">
                 <div className="pl-3 py-5 rounded-md border border-[#1F2836]  bg-[#12171F]">
                     <h1 className="text-white">Languages</h1>
                     <div className="grid grid-cols-2 md:grid-cols-2 gap-4 pt-4 ">

@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation"
 const FooterPage = () => {
     const pathname = usePathname()
     return (
-        <footer className="flex w-full border border-[#1E2D3D] h-12 space justify-between mt-auto ">
+        <footer className="hidden sm:flex w-full border border-[#1E2D3D] h-12 space justify-between mt-auto ">
             <div className="flex">
                 <h1 className="size-5 w-96 h-full font-medium border border-[#1E2D3D]  flex justify-start pl-2 items-center mr">find me in:</h1>
                 <div className="flex">

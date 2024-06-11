@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "src/components/Chess/consoleGame.jsx",
     "src/app/projects/bankapp/declarations.d.ts"
- // Aquí debes agregar la ruta de tu archivo de declaración
+, "src/components/particule/particule.jsx" // Aquí debes agregar la ruta de tu archivo de declaración
   ],
   "exclude": ["node_modules"]
 }
