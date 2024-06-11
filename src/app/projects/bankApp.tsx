@@ -7,7 +7,13 @@ import Link from 'next/link'
 const BankApp = () => {
   return (
     <div className=' flex flex-col gap-2 px-2 sm:px-16 w-full h-full  '>
-      <h1 className='text-white text-2xl'>Project: Banking Application</h1>
+      <div className='flex items-center '>
+        <h1 className='text-white text-2xl pr-7'>Project: Banking Application</h1>
+        <Link href={"https://bank-app-master.vercel.app/"} target="_blank" ><Button variant="link"><SiVercel size={25} />  <h1 className='text-1xl pl-4 text-[#8095AB]'>Deploy in vercel</h1>
+        </Button></Link>
+        <Link href={"https://portfolio-nine-blond-63.vercel.app/"} target="_blank" ><Button variant="link"><SiGithub size={25} />  <h1 className='text-1xl pl-4 text-[#8095AB]'>View in github</h1>
+        </Button></Link>
+      </div>
       <p>I developed banking application using modern technologies such as Supabase, React, Next.js, and Tailwind CSS. This application includes user registration and login functionalities, as well as a well-designed user interface for managing bank accounts, making transfers, and viewing transaction history.</p>
       <h1 className='text-white'>Key Features:</h1>
       <div className='sm:flex gap-2 '>
@@ -32,17 +38,7 @@ const BankApp = () => {
       <div className=' pt-2 flex items-center justify-center'>
         <BankPhotos />
       </div>
-      <div className=' sm:flex w-full'>
-        <div className=' sm:w-1/2 pt-8'>
-          <Link href={"https://portfolio-nine-blond-63.vercel.app/"} target="_blank" ><Button variant="link"><SiVercel size={80} />  <h1 className='text-2xl pl-4'>Deploy in vercel</h1>
-          </Button></Link>
-        </div>
-        <div className=' sm:w-1/2 pt-8'>
-          <Link href={"https://portfolio-nine-blond-63.vercel.app/"} target="_blank" ><Button variant="link"><SiGithub size={80} />  <h1 className='text-2xl pl-4'>View in github</h1>
-          </Button></Link>
-        </div>
 
-      </div>
 
     </div>
   )

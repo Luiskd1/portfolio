@@ -9,7 +9,7 @@ export default function Home() {
   const [startGamesa, setStartGame] = useState(false); // Define startGame como una variable de estado
 
   return (
-    <main className="flex text-lg h-full items-center bg-transparent relative">
+    <main className="flex text-lg h-full  items-center bg-transparent relative">
       <div className="absolute inset-0 z-0" style={{ opacity: 0.1 }}>
         {/* Aquí se coloca la imagen de fondo */}
         <Image src="/spark.gif" alt="Spark" layout="fill" objectFit="cover" />

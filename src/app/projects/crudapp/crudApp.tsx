@@ -6,7 +6,13 @@ import { SiGithub, SiVercel } from "react-icons/si"
 const CrudApp = () => {
   return (
     <div className=' flex flex-col gap-2 px-2 sm:px-16 w-full h-full'>
-      <h1 className='text-white text-2xl'>Project: Crud Application</h1>
+      <div className='flex items-center '>
+        <h1 className='text-white text-2xl pr-7'>Project: Crud Application</h1>
+        <Link href={"https://crud-final-luiskd1.vercel.app/"} target="_blank" ><Button variant="link"><SiVercel size={25} />  <h1 className='text-1xl pl-4 text-[#8095AB]'>Deploy in vercel</h1>
+        </Button></Link>
+        <Link href={"https://portfolio-nine-blond-63.vercel.app/"} target="_blank" ><Button variant="link"><SiGithub size={25} />  <h1 className='text-1xl pl-4 text-[#8095AB]'>View in github</h1>
+        </Button></Link>
+      </div>
       <p>This project is a CRUD (Create, Read, Update, Delete) application developed to showcase skills in modern web development. The application allows users to manage data through an intuitive and functional interface, incorporating advanced search features for a better user experience.</p>
       <h1 className="text-white">Key Features:</h1>
       <div className='sm:flex gap-2'>
