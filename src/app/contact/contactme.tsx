@@ -64,20 +64,20 @@ export default function ContactMe() {
           <div className="grid sm:grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="name">Name</Label>
-              <Input className='text-black' id="name" value={formData.name} onChange={handleChange} placeholder="Enter your first name" />
+              <Input className='text-white' id="name" value={formData.name} onChange={handleChange} placeholder="Enter your first name" />
             </div>
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
-              <Input className='text-black' id="email" type="email" value={formData.email} onChange={handleChange} placeholder="Enter your email" />
+              <Input className='text-white' id="email" type="email" value={formData.email} onChange={handleChange} placeholder="Enter your email" />
             </div>
           </div>
           <div className="space-y-2">
             <Label htmlFor="subject">Subject</Label>
-            <Input  className='text-black' id="subject" value={formData.subject} onChange={handleChange} placeholder="Enter your subject" />
+            <Input  className='text-white' id="subject" value={formData.subject} onChange={handleChange} placeholder="Enter your subject" />
           </div>
           <div className="space-y-2">
             <Label htmlFor="message">Message</Label>
-            <Textarea   id="message" value={formData.message} onChange={handleChange} placeholder="Enter your message" className="min-h-[100px] text-black" />
+            <Textarea   id="message" value={formData.message} onChange={handleChange} placeholder="Enter your message" className="min-h-[100px] text-white" />
           </div>
           <div className="flex w-full justify-center">
             <Button type="submit" className="w-2/6 justify-center border-[#1F2836] bg-white text-[#12171F] mt-3 hover:bg-[#7ED321] hover:text-red-500">

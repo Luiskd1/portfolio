@@ -17,9 +17,9 @@ const Page = () => {
 
 
   return (
-    <div className=' w-full  sm:h-full sm:flex '>
+    <div className=' w-full  sm:h-full sm:flex  '>
 
-      <div className="flex w-screen  flex-col gap-6  h-full border border-[#1E2D3D] sm:w-[28.5rem]   items-center ">
+      <div className="flex w-full  flex-col gap-6  h-full border border-[#1E2D3D] sm:w-[28.5rem]   items-center ">
         <div className='border-b  border-b-[#1E2D3D] w-full h-[4rem] '>
           <h1 className='flex w-full h-full items-center justify-center  text-white text-2xl'>/Projects</h1>
         </div>
@@ -61,12 +61,12 @@ const Page = () => {
 
       <div className='w-full h-full pt-6'>
         {activeTab === 0 && (
-          <div>
+          <div className='w-full '>
             <BankApp />
           </div>
         )}
         {activeTab === 1 && (
-          <div>
+          <div className='w-full h-full pt-6'>
             <CrudApp />
           </div>
         )}

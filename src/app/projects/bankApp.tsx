@@ -1,12 +1,15 @@
 import React from 'react'
 import BankPhotos from './bankphotos'
+import { SiGithub, SiVercel } from 'react-icons/si'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 const BankApp = () => {
   return (
-    <div className=' flex flex-col gap-2 px-16 w-full h-full'>
+    <div className=' flex flex-col gap-2 px-2 sm:px-16 w-full h-full  '>
       <h1 className='text-white text-2xl'>Project: Banking Application</h1>
       <p>I developed banking application using modern technologies such as Supabase, React, Next.js, and Tailwind CSS. This application includes user registration and login functionalities, as well as a well-designed user interface for managing bank accounts, making transfers, and viewing transaction history.</p>
-      <h1>Key Features:</h1>
+      <h1 className='text-white'>Key Features:</h1>
       <div className='sm:flex gap-2 '>
         <div className="px-10 py-3  sm:w-1/2 first-line:py-5 rounded-md border border-[#1F2836]  bg-[#12171F]">
           <h1 className='text-white pb-6'>User Authentication:</h1>
@@ -26,8 +29,21 @@ const BankApp = () => {
 
         </div>
       </div>
+      <div className=' pt-2 flex items-center justify-center'>
+        <BankPhotos />
+      </div>
+      <div className=' sm:flex w-full'>
+        <div className=' sm:w-1/2 pt-8'>
+          <Link href={"https://portfolio-nine-blond-63.vercel.app/"} target="_blank" ><Button variant="link"><SiVercel size={80} />  <h1 className='text-2xl pl-4'>Deploy in vercel</h1>
+          </Button></Link>
+        </div>
+        <div className=' sm:w-1/2 pt-8'>
+          <Link href={"https://portfolio-nine-blond-63.vercel.app/"} target="_blank" ><Button variant="link"><SiGithub size={80} />  <h1 className='text-2xl pl-4'>View in github</h1>
+          </Button></Link>
+        </div>
 
-    <BankPhotos/>
+      </div>
+
     </div>
   )
 }

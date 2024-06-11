@@ -26,6 +26,7 @@ const CrudPhotos = () => {
 
     return (
         <Carousel
+        className='w-full   max-w-xs  sm:max-w-full'
             plugins={[
                 Autoplay({
                     delay: 2000,
@@ -34,7 +35,7 @@ const CrudPhotos = () => {
         >
             <CarouselContent>
                 {images.map((image, index) => (
-                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 bg-[#131B23]">
+                    <CarouselItem key={index} className=" w-full h-full md:basis-1/2 lg:basis-1/3 bg-[#131B23]">
                         <div className="p-1">
                             <Card className="border border-[#1E2D3D] bg-[#131B23]">
                                 <CardContent className="flex items-center justify-center p-6">
@@ -44,7 +45,7 @@ const CrudPhotos = () => {
                                                 <Image  src={image} alt={`Bank ${index + 1}`} width={1920} height={1080} className="w-full h-full  hover:cursor-pointer"/>
                                             </div>
                                         </DialogTrigger>
-                                        <DialogContent className="min-w-[90%] h-[90%] flex items-center justify-center bg-gradient-to-r border bg-[#04060A] border-[#131B23] to-[#151E27]">
+                                        <DialogContent className="min-w-[90%] h-[90%] flex items-center justify-center bg-gradient-to-r border dark ">
                                             <Image src={image} alt={`Bank ${index + 1}`} width={1920} height={1080} className="max-w-full max-h-full "/>
                                         </DialogContent>
                                     </Dialog>
