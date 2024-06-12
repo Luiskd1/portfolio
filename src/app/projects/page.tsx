@@ -45,7 +45,7 @@ const Page = () => {
             />
             CrudApp
           </button>
-          <button
+          {/* <button
             className={`group flex items-center gap-2 hover:text-white ${activeTab === 2 ? 'text-white' : ''}`}
             onClick={() => handleTabClick(2)}
           >
@@ -54,7 +54,7 @@ const Page = () => {
               className={`${activeTab === 2 ? 'text-green-500' : 'text-[#8095AB]'} group-hover:text-green-500`}
             />
             Portfolio
-          </button>
+          </button> */}
         </div>
 
       </div>
