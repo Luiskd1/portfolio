@@ -44,7 +44,7 @@ export default function RootLayout({
                 </div>
               </div>
               <div className="row-span-3">
-                <FooterPage />
+                <FooterPage />  
                 <FooterMobile/>
               </div>
             </div>

@@ -18,8 +18,8 @@ const BankApp = () => {
       </div>
       <p>I developed banking application using modern technologies such as Supabase, React, Next.js, and Tailwind CSS. This application includes user registration and login functionalities, as well as a well-designed user interface for managing bank accounts, making transfers, and viewing transaction history.</p>
       <h1 className='text-white'>Key Features:</h1>
-      <div className='lg:flex gap-2 '>
-        <div className="px-10 py-3  lg:w-1/2 first-line:py-5 rounded-lg border border-[#1F2836]  bg-[#12171F]">
+      <div className='xl:flex gap-2 '>
+        <div className="px-10 py-3  xl:w-1/2 first-line:py-5 rounded-lg border border-[#1F2836]  bg-[#12171F]">
           <h1 className='text-white pb-6'>User Authentication:</h1>
           <ul className="list-disc list-inside pl-4">
             <li>User Registration: Allows new users to create an account by providing the necessary information.</li>
@@ -27,7 +27,7 @@ const BankApp = () => {
           </ul>
 
         </div>
-        <div className="px-10 py-3 mt-2 lg:mt-0 lg:w-1/2 first-line:py-5 rounded-lg border border-[#1F2836]  bg-[#12171F]">
+        <div className="px-10 py-3 mt-2 lg:mt-0 xl:w-1/2 first-line:py-5 rounded-lg border border-[#1F2836]  bg-[#12171F]">
           <h1 className='text-white pb-6'>Bank Account Management:</h1>
           <ul className="list-disc list-inside pl-4">
             <li>Dashboard View: Displays a summary of the user&apos;s accounts, including the current balance and recent transactions.</li>
