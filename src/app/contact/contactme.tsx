@@ -68,7 +68,7 @@ export default function ContactMe() {
   };
 
   return (
-    <div className="w-full h-full flex justify-center items-center">
+    <motion.div className="w-full h-full flex justify-center items-center">
       <Toaster
         position="top-center"
         reverseOrder={false}
@@ -100,6 +100,6 @@ export default function ContactMe() {
           </div>
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 }
