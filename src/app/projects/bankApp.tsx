@@ -11,7 +11,7 @@ const BankApp = () => {
         <h1 className='text-white text-2xl pr-7'>Project: Banking Application</h1>
         <Link href={"https://bank-app-master.vercel.app/"} target="_blank" ><Button variant="link"><SiVercel size={25} />  <h1 className='text-1xl pl-4 text-[#8095AB]'>Deploy in vercel</h1>
         </Button></Link>
-        <Link href={"https://portfolio-nine-blond-63.vercel.app/"} target="_blank" ><Button variant="link"><SiGithub size={25} />  <h1 className='text-1xl pl-4 text-[#8095AB]'>View in github</h1>
+        <Link href={"https://github.com/Luiskd1/bank_app-master"} target="_blank" ><Button variant="link"><SiGithub size={25} />  <h1 className='text-1xl pl-4 text-[#8095AB]'>View in github</h1>
         </Button></Link>
       </div>
       <p>I developed banking application using modern technologies such as Supabase, React, Next.js, and Tailwind CSS. This application includes user registration and login functionalities, as well as a well-designed user interface for managing bank accounts, making transfers, and viewing transaction history.</p>
