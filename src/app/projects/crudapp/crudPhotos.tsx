@@ -26,7 +26,7 @@ const CrudPhotos = () => {
 
     return (
         <Carousel
-        className='w-full   max-w-xs  lg:max-w-full'
+        className='w-full   max-w-xs  xl:max-w-full'
             plugins={[
                 Autoplay({
                     delay: 2000,
@@ -35,7 +35,7 @@ const CrudPhotos = () => {
         >
             <CarouselContent>
                 {images.map((image, index) => (
-                    <CarouselItem key={index} className=" w-full h-full md:basis-1/2 2xl:basis-1/3 bg-[#131B23]">
+                    <CarouselItem key={index} className=" w-full h-full xl:basis-1/2 2xl:basis-1/3 bg-[#131B23]">
                         <div className="p-1">
                             <Card className="border border-[#1E2D3D] bg-[#131B23]">
                                 <CardContent className="flex items-center justify-center lg:p-6">
