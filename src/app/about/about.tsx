@@ -8,8 +8,8 @@ import Image from "next/image";
 
 const About = () => {
     return (
-        <div className="sm:flex w-full px-2 ">
-            <div className="sm:flex sm:w-10/12 sm:h-full ml-10 pt-10">
+        <div className="lg:flex w-full px-2 ">
+            <div className="lg:flex lg:w-10/12 lg:h-full ml-10 pt-10">
                 <div className="">
                     <h1 className="text-white">About me</h1>
                     <p>I&apos;m an electronic engineer with a passion for frontend programming. I specialize in using React and Next.js, and I&apos;m proficient in databases like MongoDB and Supabase.</p>
@@ -81,10 +81,10 @@ const About = () => {
             </div>
 
             
-            <div className="  sm:w-2/12  sm:border-l-2 border-[#1E2D3D] sm:h-full   pt-10 px-3   ">
-                <div className="pl-3 py-5 rounded-md border border-[#1F2836]  bg-[#12171F]">
+            <div className="  lg:w-2/12  lg:border-l-2 border-[#1E2D3D] lg:h-full   pt-10 px-3   ">
+                <div className="pl-3 py-5 rounded-lg border border-[#1F2836]  bg-[#12171F]">
                     <h1 className="text-white">Languages</h1>
-                    <div className="grid grid-cols-2 md:grid-cols-2 gap-4 pt-4 ">
+                    <div className="grid grid-cols-2 lg:grid-cols-1 2xl:grid-cols-2 gap-4 pt-4 ">
                         <div className="flex flex-col  justify-center text-center ">
                             <SiJavascript size={40} color="yellow" className="flex w-full justify-center" />
                             <p>JavaScript</p>
@@ -103,9 +103,9 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-                <div className="pl-3 py-5 mt-4 rounded-md border border-[#1F2836]  bg-[#12171F]">
+                <div className="pl-3 py-5 mt-4 rounded-lg border border-[#1F2836]  bg-[#12171F]">
                     <h1 className="text-white">Frameworks</h1>
-                    <div className="grid grid-cols-2 md:grid-cols-2 gap-4 pt-4 ">
+                    <div className="grid grid-cols-2 lg:grid-cols-1 2xl:grid-cols-2 gap-4 pt-4 ">
                         <div className="flex flex-col  justify-center text-center ">
                             <SiReact size={40} color="#2965f1" className="flex w-full justify-center" />
                             <p>React</p>

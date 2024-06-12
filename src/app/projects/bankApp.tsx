@@ -6,18 +6,20 @@ import Link from 'next/link'
 
 const BankApp = () => {
   return (
-    <div className=' flex flex-col gap-2 px-2 sm:px-16 w-full h-full  '>
-      <div className='flex items-center '>
-        <h1 className='text-white text-2xl pr-7'>Project: Banking Application</h1>
-        <Link href={"https://bank-app-master.vercel.app/"} target="_blank" ><Button variant="link"><SiVercel size={25} />  <h1 className='text-1xl pl-4 text-[#8095AB]'>Deploy in vercel</h1>
-        </Button></Link>
-        <Link href={"https://github.com/Luiskd1/bank_app-master"} target="_blank" ><Button variant="link"><SiGithub size={25} />  <h1 className='text-1xl pl-4 text-[#8095AB]'>View in github</h1>
-        </Button></Link>
+    <div className=' flex flex-col gap-2 px-2 lg:px-16 w-full h-full  '>
+      <div className='flex items-center  w-full  '>
+        <h1 className='text-white text-2xl md:pr-2 w-[40%] sm:w-auto'>Project: Banking Application</h1>
+        <div className=' xl:flex w-[60%] sm:w-auto '>
+          <Link href={"https://bank-app-master.vercel.app/"} target="_blank" ><Button variant="link"><SiVercel size={25} />  <h1 className='text-1xl lg:pl-4 pl-1 text-[#8095AB]'>Deploy in vercel</h1>
+          </Button></Link>
+          <Link href={"https://github.com/Luiskd1/bank_app-master"} target="_blank" ><Button variant="link"><SiGithub size={25} />  <h1 className='text-1xl lg:pl-4 pl-1 text-[#8095AB]'>View in github</h1>
+          </Button></Link>
+        </div>
       </div>
       <p>I developed banking application using modern technologies such as Supabase, React, Next.js, and Tailwind CSS. This application includes user registration and login functionalities, as well as a well-designed user interface for managing bank accounts, making transfers, and viewing transaction history.</p>
       <h1 className='text-white'>Key Features:</h1>
-      <div className='sm:flex gap-2 '>
-        <div className="px-10 py-3  sm:w-1/2 first-line:py-5 rounded-md border border-[#1F2836]  bg-[#12171F]">
+      <div className='lg:flex gap-2 '>
+        <div className="px-10 py-3  lg:w-1/2 first-line:py-5 rounded-lg border border-[#1F2836]  bg-[#12171F]">
           <h1 className='text-white pb-6'>User Authentication:</h1>
           <ul className="list-disc list-inside pl-4">
             <li>User Registration: Allows new users to create an account by providing the necessary information.</li>
@@ -25,7 +27,7 @@ const BankApp = () => {
           </ul>
 
         </div>
-        <div className="px-10 py-3 mt-2 sm:mt-0 sm:w-1/2 first-line:py-5 rounded-md border border-[#1F2836]  bg-[#12171F]">
+        <div className="px-10 py-3 mt-2 lg:mt-0 lg:w-1/2 first-line:py-5 rounded-lg border border-[#1F2836]  bg-[#12171F]">
           <h1 className='text-white pb-6'>Bank Account Management:</h1>
           <ul className="list-disc list-inside pl-4">
             <li>Dashboard View: Displays a summary of the user&apos;s accounts, including the current balance and recent transactions.</li>

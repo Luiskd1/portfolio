@@ -73,9 +73,9 @@ export default function ContactMe() {
         position="top-center"
         reverseOrder={false}
       />
-      <div className="px-2 sm:px-10 py-3 w-full sm:w-1/2 first-line:py-5 rounded-md border border-[#1F2836] bg-[#12171F]">
+      <div className="px-2 lg:px-10 py-3 w-full lg:w-1/2 first-line:py-5 rounded-md border border-[#1F2836] bg-[#12171F]">
         <form className="space-y-4" onSubmit={handleSubmit}>
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="grid lg:grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="name">Name</Label>
               <Input className='text-white' id="name" value={formData.name} onChange={handleChange} placeholder="Enter your first name" />

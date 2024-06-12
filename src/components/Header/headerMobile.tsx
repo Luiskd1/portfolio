@@ -32,11 +32,11 @@ const HeaderMobile = () => {
 
     const pathname = usePathname()
     return (
-        <div className="flex sm:hidden justify-between px-5 py-4">
+        <div className="flex lg:hidden justify-between px-5 py-4">
           <h1 className='text-white text-2xl'>Luis Santana</h1>
           <Sheet key={"left"}>
             <SheetTrigger><MdMenu size={35} color='white' /></SheetTrigger>
-            <SheetContent className="w-[300px] sm:w-[540px] border-[#1E2D3D] bg-[#04070B]">
+            <SheetContent className="w-[300px] lg:w-[540px] border-[#1E2D3D] bg-[#04070B]">
               <SheetHeader>
                 {urlpath.map((x, index) => (
                   <div className='flex flex-col pt-5 justify-start text-[#8095AB]' key={index}>

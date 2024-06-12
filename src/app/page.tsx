@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import GameCulebra from "@/components/Chess/consoleGame";
@@ -9,12 +9,12 @@ export default function Home() {
   const [startGamesa, setStartGame] = useState(false); // Define startGame como una variable de estado
 
   return (
-    <main className="flex text-lg h-full  items-center bg-transparent relative">
+    <main className="flex flex-col lg:flex-row text-lg h-full items-center bg-transparent relative">
       <div className="absolute inset-0 z-0" style={{ opacity: 0.1 }}>
         {/* Aquí se coloca la imagen de fondo */}
         <Image src="/spark.gif" alt="Spark" layout="fill" objectFit="cover" />
       </div>
-      <div className="flex pl-2 sm:pl-0 sm:w-1/2 h-full  text-white justify-center items-center relative z-10">
+      <div className="flex pl-2 lg:pl-0 lg:w-1/2 h-full text-white justify-center items-center  relative z-10">
         <div>
           <h2>Hi All. I am </h2>
           <motion.h1
@@ -36,12 +36,12 @@ export default function Home() {
           </motion.h2>
         </div>
       </div>
-      <div className="hidden sm:flex sm:w-1/2">
-        <div className="hidden sm:flex snake-game w-full">
+      <div className=" hidden w-full lg:w-1/2 h-full lg:flex justify-center items-center">
+        <div className="hidden lg:flex snake-game w-full">
           <GameCulebra />
-          <div className="flex flex-col justify-center w-full item-center">
-            <h1 className="text-white"> ussing arrow </h1>
-            <Image src={"/buttonarrow.png"} alt="keyborad" height={200} width={350} className="" />
+          <div className="flex flex-col justify-center items-center w-full">
+            <h1 className="text-white"> using arrow </h1>
+            <Image src={"/buttonarrow.png"} alt="keyboard" height={200} width={350} className="" />
           </div>
         </div>
       </div>

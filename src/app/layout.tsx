@@ -6,6 +6,7 @@ import HeaderPage from "@/components/Header/header";
 import FooterPage from "@/components/Footer/FooterPage";
 import HeaderMobile from "@/components/Header/headerMobile";
 import { ThemeProvider } from "@/components/themeproviders/themeproviders";
+import FooterMobile from "@/components/Footer/FooterMobile";
 
 const inter = Fira_Code({ subsets: ["latin"] });
 
@@ -25,7 +26,7 @@ export default function RootLayout({
     <html lang="en">
 
       <body className={inter.className}>
-        <NextUIProvider className="w-full h-screen relative sm:p-16 text-[#8095AB]" style={{ background: 'linear-gradient(135deg, #04060A, #151E27)' }} >
+        <NextUIProvider className="w-full h-screen relative lg:p-16 text-[#8095AB]" style={{ background: 'linear-gradient(135deg, #04060A, #151E27)' }} >
           <ThemeProvider
             attribute="class"
             defaultTheme="dark"
@@ -44,6 +45,7 @@ export default function RootLayout({
               </div>
               <div className="row-span-3">
                 <FooterPage />
+                <FooterMobile/>
               </div>
             </div>
           </ThemeProvider>

@@ -251,8 +251,6 @@
 
   .parallax {
     overflow: hidden; /* Asegura que el contenido que sobrepase no se muestre */
-    white-space: nowrap;
-    flex-wrap: nowrap;
     width: 100%; /* Ajusta el ancho según tus necesidades */
 }
 
@@ -266,5 +264,24 @@
 
 .parallax span {
     display: block;
-    margin-right: 30px;
+    margin-right: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .parallax .scroller {
+      font-size: clamp(10px, 4vw, 18px); /* Tamaño de fuente responsivo */
+    }
+    .parallax span {
+    margin-right: 20px; /* Reduce el margen entre elementos */
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .parallax .scroller {
+        font-size: 11px; /* Adjust font size for medium screens */
+    }
+    .parallax span {
+        margin-right: 20px; /* Adjust margin for medium screens */
+    }
 }

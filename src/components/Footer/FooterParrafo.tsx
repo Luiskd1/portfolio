@@ -29,7 +29,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
   });
 
   // Magic wrapping for the length of the text - replace for wrapping that works for you or dynamically calculate
-  const x = useTransform(baseX, (v) => `${wrap(-20, -80, v)}%`);
+  const x = useTransform(baseX, (v) => `${wrap(-30, -70, v)}%`);
 
   const directionFactor = useRef<number>(1);
   useAnimationFrame((t, delta) => {
@@ -62,6 +62,8 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
         <span>{children} </span>
         <span>{children} </span>
         <span>{children} </span>
+        <span>{children} </span>
+        <span>{children} </span>
       </motion.div>
     </div>
   );
@@ -69,9 +71,10 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 
 export default function App() {
   return (
-    <section className="flex w-full text-2xl text-center ">
-      <div className="max-w-screen-xl mx-auto">
-        <ParallaxText baseVelocity={-1}>my portfolio Luis Santana 2024 ----</ParallaxText>
+    <section className="  xl:flex w-full text-1xl text-center  items-center justify-center ">
+      <h1 className=" 2xl:hidden text-center">----my portfolio Luis Santana 2024 ----</h1>
+      <div className="hidden 2xl:flex  w-full 2xl:max-w-screen-md 3xl:max-w-screen-lg mx-auto">
+        <ParallaxText baseVelocity={-1.5}>my portfolio Luis Santana 2024 ----</ParallaxText>
       </div>
     </section>
   );
