@@ -1,8 +1,7 @@
 'use client'
 import { FolderClosed } from 'lucide-react';
-import Image from 'next/image';
 import React, { useState } from 'react';
-import { IoArrowForwardSharp } from "react-icons/io5";
+import { motion } from "framer-motion";
 import BankApp from './bankApp';
 import CrudApp from './crudapp/crudApp';
 
@@ -17,6 +16,7 @@ const Page = () => {
 
 
   return (
+
     <div className=' w-full  sm:h-full sm:flex  '>
 
       <div className="flex w-full  flex-col gap-6     h-full border border-[#1E2D3D] sm:w-[28.5rem]   items-center ">
@@ -25,26 +25,34 @@ const Page = () => {
         </div>
 
         <div className=' grid grid-cols-2   sm:flex  h-full   sm:flex-col gap-6'>
-          <button
+          <motion.button
             className={`group flex items-center gap-2 hover:text-white ${activeTab === 0 ? 'text-white' : ''}`}
             onClick={() => handleTabClick(0)}
+            whileTap={{ scale: 0.9 }}
+            animate={{ opacity: 1, y: 0 }}
+
           >
             <FolderClosed
               size={25}
               className={`${activeTab === 0 ? 'text-red-500' : 'text-[#8095AB]'} group-hover:text-red-500`}
             />
             BankApp
-          </button>
-          <button
+          </motion.button>
+          <motion.button
             className={`group flex items-center gap-2 hover:text-white ${activeTab === 1 ? 'text-white' : ''}`}
             onClick={() => handleTabClick(1)}
+            whileTap={{ scale: 0.9 }}
+            animate={{ opacity: 1, y: 0 }}
+
           >
+
+
             <FolderClosed
               size={25}
               className={`${activeTab === 1 ? 'text-blue-500' : 'text-[#8095AB]'} group-hover:text-blue-500`}
             />
             CrudApp
-          </button>
+          </motion.button>
           {/* <button
             className={`group flex items-center gap-2 hover:text-white ${activeTab === 2 ? 'text-white' : ''}`}
             onClick={() => handleTabClick(2)}
@@ -61,14 +69,28 @@ const Page = () => {
 
       <div className='w-full h-full pt-6'>
         {activeTab === 0 && (
-          <div className='w-full '>
+          <motion.div
+            key={activeTab}
+            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.8 }}
+            className='w-full'
+          >
             <BankApp />
-          </div>
+          </motion.div>
         )}
         {activeTab === 1 && (
-          <div className='w-full h-full pt-6'>
+          <motion.div
+            key={activeTab}
+            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.8 }}
+            className='w-full'
+          >
             <CrudApp />
-          </div>
+          </motion.div>
         )}
         {activeTab === 2 && <div>Content for Tab 3</div>}
       </div>
