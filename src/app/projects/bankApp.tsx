@@ -10,7 +10,7 @@ const BankApp = () => {
       <div className='flex items-center  w-full  '>
         <h1 className='text-white text-2xl md:pr-2 w-[40%] sm:w-auto'>Project: Banking Application</h1>
         <div className=' xl:flex w-[60%] sm:w-auto '>
-          <Link href={"https://bank-app-master.vercel.app/"} target="_blank" ><Button variant="link"><SiVercel size={25} />  <h1 className='text-1xl lg:pl-4 pl-1 text-[#8095AB]'>Deploy in vercel</h1>
+          <Link href={"https://bank-app-master-f.vercel.app/"} target="_blank" ><Button variant="link"><SiVercel size={25} />  <h1 className='text-1xl lg:pl-4 pl-1 text-[#8095AB]'>Deploy in vercel</h1>
           </Button></Link>
           <Link href={"https://github.com/Luiskd1/bank_app-master"} target="_blank" ><Button variant="link"><SiGithub size={25} />  <h1 className='text-1xl lg:pl-4 pl-1 text-[#8095AB]'>View in github</h1>
           </Button></Link>
