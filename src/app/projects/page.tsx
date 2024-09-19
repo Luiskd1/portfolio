@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { motion } from "framer-motion";
 import BankApp from './bankApp';
 import CrudApp from './crudapp/crudApp';
+import RentalApp from './rental-cars/rentalCars';
 
 
 const Page = () => {
@@ -53,16 +54,21 @@ const Page = () => {
             />
             CrudApp
           </motion.button>
-          {/* <button
+          <motion.button
             className={`group flex items-center gap-2 hover:text-white ${activeTab === 2 ? 'text-white' : ''}`}
             onClick={() => handleTabClick(2)}
+            whileTap={{ scale: 0.9 }}
+            animate={{ opacity: 1, y: 0 }}
+
           >
+
+
             <FolderClosed
               size={25}
               className={`${activeTab === 2 ? 'text-green-500' : 'text-[#8095AB]'} group-hover:text-green-500`}
             />
-            Portfolio
-          </button> */}
+            Rental Cars
+          </motion.button>
         </div>
 
       </div>
@@ -92,7 +98,7 @@ const Page = () => {
             <CrudApp />
           </motion.div>
         )}
-        {activeTab === 2 && <div>Content for Tab 3</div>}
+        {activeTab === 2 && <div><RentalApp/></div>}
       </div>
     </div>
   );
