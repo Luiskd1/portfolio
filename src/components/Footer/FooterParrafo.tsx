@@ -71,10 +71,14 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 
 export default function App() {
   return (
-    <section className="  flex w-full text-1xl text-center  items-center justify-center ">
-      <h1 className=" 2xl:hidden text-center">----my portfolio Luis Santana 2024 ----</h1>
-      <div className="hidden 2xl:flex  w-full 2xl:max-w-screen-md 3xl:max-w-screen-lg mx-auto">
-        <ParallaxText baseVelocity={-1.5}>my portfolio Luis Santana 2024 ----</ParallaxText>
+    <section className="flex w-full text-sm text-center items-center justify-center">
+      <h1 className="2xl:hidden text-center text-[#8095AB]">
+        © 2025 Luis Santana • Full Stack Developer • Made with ❤️
+      </h1>
+      <div className="hidden 2xl:flex w-full 2xl:max-w-screen-md 3xl:max-w-screen-lg mx-auto">
+        <ParallaxText baseVelocity={-1.5}>
+          © 2025 Luis Santana • Full Stack Developer • Portfolio • Made with ❤️ • 
+        </ParallaxText>
       </div>
     </section>
   );

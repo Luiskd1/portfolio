@@ -1,18 +1,16 @@
 'use client'
 import Link from "next/link";
-import CrudPhotos from "./RentalCarsPhotos";
 import { Button } from "@/components/ui/button";
 import { SiGithub, SiVercel } from "react-icons/si";
-import RentalPhotos from "./RentalCarsPhotos";
-import { rentalCarsData } from "./rentalCars.data";
-import { rentalCarsDataEs } from "./rentalCars.data.es";
+import WhatsappIAPhotos from "./WhatsappIAPhotos";
+import { whatsappIAData } from "./whatsappIA.data";
+import { whatsappIADataEs } from "./whatsappIA.data.es";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const RentalApp = () => {
+const WhatsappIAApp = () => {
   const { language, t } = useLanguage();
-  const projectData = language === 'en' ? rentalCarsData : rentalCarsDataEs;
+  const projectData = language === 'en' ? whatsappIAData : whatsappIADataEs;
   const { description, features, github, technologies, title, vercel } = projectData;
-
   return (
     <div className=" flex flex-col gap-2 md:px-2 lg:px-16 w-full h-full">
       <div className="flex items-center  w-full  ">
@@ -59,10 +57,11 @@ const RentalApp = () => {
       </div>
 
       <div className=" pt-2 flex items-center justify-center">
-        <RentalPhotos />
+        <WhatsappIAPhotos />
       </div>
     </div>
   );
 };
 
-export default RentalApp;
+export default WhatsappIAApp;
+

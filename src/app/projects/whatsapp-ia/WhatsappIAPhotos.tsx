@@ -11,13 +11,14 @@ import {
 import Image from 'next/image';
 
 
-const RentalPhotos = () => {
+const WhatsappIAPhotos = () => {
     const images = [
-        "/rentalcars/rental1.png",
-        "/rentalcars/rental2.png",
-        "/rentalcars/rental3.png",
-        "/rentalcars/rental4.png",
-        "/rentalcars/rental5.png",
+        "/whatsapp-ia/ia1.png",
+        "/whatsapp-ia/ia2.png",
+        "/whatsapp-ia/ia3.png",
+        "/whatsapp-ia/ia4.png",
+        "/whatsapp-ia/ia5.png",
+        "/whatsapp-ia/ia6.png",
     ];
 
     return (
@@ -38,11 +39,11 @@ const RentalPhotos = () => {
                                     <Dialog>
                                         <DialogTrigger asChild>
                                             <div className=" h-[400px] flex justify-center items-center overflow-hidden">
-                                                <Image  src={image} alt={`Rental ${index + 1}`} width={1920} height={1080} className="w-full h-full  hover:cursor-pointer"/>
+                                                <Image  src={image} alt={`WhatsApp IA ${index + 1}`} width={1920} height={1080} className="w-full h-full  hover:cursor-pointer"/>
                                             </div>
                                         </DialogTrigger>
                                         <DialogContent className="min-w-[90%] h-[90%] flex items-center justify-center bg-gradient-to-r border dark ">
-                                            <Image src={image} alt={`Rental ${index + 1}`} width={1920} height={1080} className="max-w-full max-h-full object-contain "/>
+                                            <Image src={image} alt={`WhatsApp IA ${index + 1}`} width={1920} height={1080} className="max-w-full max-h-full object-contain "/>
                                         </DialogContent>
                                     </Dialog>
                                 </CardContent>
@@ -57,4 +58,5 @@ const RentalPhotos = () => {
     );
 }
 
-export default RentalPhotos
+export default WhatsappIAPhotos
+

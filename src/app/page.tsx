@@ -2,11 +2,12 @@
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import GameCulebra from "@/components/Chess/consoleGame";
-import { motion } from "framer-motion"; // Importa motion desde framer-motion
+import { motion } from "framer-motion";
 import ParticlesSearch from "@/components/particule/particules";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Home() {
-  const [startGamesa, setStartGame] = useState(false); // Define startGame como una variable de estado
+  const { t } = useLanguage();
 
   return (
     <main className="flex flex-col lg:flex-row text-lg h-full items-center bg-transparent relative">
@@ -16,14 +17,14 @@ export default function Home() {
       </div>
       <div className="flex pl-2 lg:pl-0 lg:w-1/2 h-full text-white justify-center items-center  relative z-10">
         <div>
-          <h2>Hi All. I am </h2>
+          <h2>{t.home.greeting} </h2>
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="text-6xl text-white"
           >
-            Luis Santana
+            {t.home.name}
           </motion.h1>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -32,7 +33,7 @@ export default function Home() {
             className="text-3xl text-[#4D5BCE]"
             variants={letterVariants}
           >
-            {">"}Front-end developer
+            {">"}{t.home.role}
           </motion.h2>
         </div>
       </div>
@@ -40,7 +41,7 @@ export default function Home() {
         <div className="hidden lg:flex snake-game w-full">
           <GameCulebra />
           <div className="flex flex-col justify-center items-center w-full">
-            <h1 className="text-white"> using arrow </h1>
+            <h1 className="text-white"> {t.home.snakeInstructions} </h1>
             <Image src={"/buttonarrow.png"} alt="keyboard" height={200} width={350} className="" />
           </div>
         </div>
